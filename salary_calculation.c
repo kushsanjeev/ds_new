@@ -1,15 +1,15 @@
 #include<stdio.h>
 
-float percent(float basic,int perc){
+float percent(float basic,int perc, float EPF){
   float cal_perc;
-cal_perc=(perc*basic*10)/100;
+cal_perc=(perc*basic*EPF)/100;
 return cal_perc;
 }
 
 void calculate_salary(float basic,float gross_salary, float net_salary){
   if(1<=basic<=5000000){
 //printf("%f\n",percent(basic,50));
-gross_salary=basic+percent(basic,50)+percent(basic,10);
+gross_salary=basic+percent(basic,50,EPF)+percent(basic,10);
 //printf("%f\n",basic);
 }
 
@@ -31,9 +31,11 @@ printf("Net salary of employee after donating to PM care fund is: %f",net_salary
 
 int main(){
 int perc;
-float basic,gross_salary,net_salary;
+float basic,gross_salary,net_salary, EPF;
 printf("Enter the basic salary of the employee\n");
 scanf("%f",&basic);
-calculate_salary(basic,gross_salary,net_salary);
+printf("Enter the pf of the employee\n");
+scanf("%f",&EPF);
+calculate_salary(basic,gross_salary,net_salary,EPF);
 return 0;
 }
