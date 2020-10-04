@@ -4,10 +4,10 @@
 int main()
 {
     FILE * file;
-    char path[100];
+    char path[1000];
 
     char ch;
-    int characters, words, lines;
+    int character, word, line;
 
 
     printf("Enter source file path: ");
@@ -30,7 +30,7 @@ int main()
     characters = words = lines = 0;
     while ((ch = fgetc(file)) != EOF)
     {
-        characters++;
+        character = character+1;
 
    
         if (ch == '\n' || ch == '\0')
