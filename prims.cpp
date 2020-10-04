@@ -24,8 +24,8 @@ int minKey(int key[], bool mstSet[])
 void printMST(int parent[], int graph[V][V]) 
 { 
     cout<<"Edge \tWeight\n"; 
-    for (int i = 1; i < S; i++) 
-        cout<<parent[i]<<" - "<<i<<" \t"<<graph[i][parent[i]]<<" \n"; 
+    for (int i = 0; i < S; i++) 
+        cout<<parent[i]<<" - "<<i<<" \t"<<[parent[i]]graph[i]<<" \n"; 
 } 
  
 // Function to construct and print MST for 
