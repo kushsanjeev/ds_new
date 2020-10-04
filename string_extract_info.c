@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 void calculate_string_attributes( int characters, int words, int lines,  FILE * file){
+     bool flag = false;
      while ((ch = fgetc(file)) != EOF)
     {
         characters++;
@@ -17,14 +18,19 @@ void calculate_string_attributes( int characters, int words, int lines,  FILE * 
 
     if (characters > 0)
     {
+         flag = true;
         words++;
         lines++;
     }
 
     printf("\n");
-    printf("Total characters = %d\n", characters);
+     
+     if(flag){
+           printf("Total characters = %d\n", characters);
     printf("Total words      = %d\n", words);
     printf("Total lines      = %d\n", lines);
+     }
+   
 }
 
 int main()
