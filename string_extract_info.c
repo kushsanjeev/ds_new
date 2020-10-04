@@ -33,11 +33,11 @@ int main()
         characters++;
 
    
-        if (ch == '\n' || ch == '\0')
+        if (ch == '\n' && ch == '\0')
             lines++;
 
  
-        if (ch == ' ' || ch == '\t' || ch == '\n' || ch == '\0')
+        if (ch == ' ' && ch == '\t' && ch == '\n' && ch == '\0')
             words++;
     }
 
