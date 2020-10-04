@@ -30,10 +30,10 @@ void calculate_string_attributes( int characters, int words, int lines,  FILE * 
 int main()
 {
     FILE * file;
-    char path[100];
+    char path[1000];
 
     char ch;
-    int characters, words, lines;
+    int character, word, line;
 
 
     printf("Enter source file path: ");
@@ -57,7 +57,7 @@ int main()
 
     while ((ch = fgetc(file)) != EOF)
     {
-        characters++;
+        character = character+1;
 
    
         if (ch == '\n' && ch == '\0')
