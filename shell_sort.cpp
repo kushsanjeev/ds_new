@@ -26,14 +26,12 @@ int shellSort(int arr[], int n)
             //  put temp (the original a[i]) in its correct location 
             arr[j] = temp; 
         } 
-    } 
-    return 0; 
-} 
-  
-void printArray(int arr[], int n) 
-{ 
+      
+ 
     for (int i=0; i<n; i++) 
         cout << arr[i] << " "; 
+
+    return 0; 
 } 
   
 int main() 
