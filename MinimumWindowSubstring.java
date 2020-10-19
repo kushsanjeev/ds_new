@@ -18,16 +18,7 @@ class Solution {
        }
        int missing=hm.size();
        int left=0,l=0,r=Integer.MAX_VALUE;
-       for(int i=0;i<s.length();i++){
-           char ch = s.charAt(i);
-           if(hm.containsKey(ch)){
-               int c = hm.get(ch);
-               c-=1;
-               hm.put(ch,c);
-               if(c==0){
-                   missing-=1; 
-               }
-           }
+     
            while(missing==0){
                if(i-left<r-l){
                    l=left;
