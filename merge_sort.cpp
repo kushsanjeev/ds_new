@@ -71,13 +71,7 @@ void mergeSort(int arr[], int l, int r)
   
 /* UTILITY FUNCTIONS */
 /* Function to print an array */
-void printArray(int A[], int size) 
-{ 
-    int i; 
-    for (i = 0; i < size; i++) 
-        printf("%d ", A[i]); 
-    printf("\n"); 
-} 
+
   
 /* Driver program to test above functions */
 int main() 
@@ -91,6 +85,12 @@ int main()
     mergeSort(arr, 0, arr_size - 1); 
   
     printf("\nSorted array is \n"); 
-    printArray(arr, arr_size); 
+   void printArray(int A[], int size) 
+{ 
+    int i; 
+    for (i = 0; i < size; i++) 
+        printf("%d ", A[i]); 
+    printf("\n"); 
+} 
     return 0; 
 } 
