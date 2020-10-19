@@ -55,3 +55,10 @@ class MedianTwoSortedArray {
         return t;
     }
 }
+
+int main(){
+	int arr1[] = {1,2,3,4,5,6};
+	int arr2[] = {6,7,8,9,10};
+	MedianTwoSortedArray obj;
+	obj.findMedianSortedArrays(arr1,arr2);
+}
