@@ -22,14 +22,7 @@ bool calculate_loop(int n, bool flag){
 for(i=3;i<=sqrt(n);i=i+2)
     {
         // While i divides n, print i and divide n
-        while (n%i==0)
-        {
-        if(i!=5&&i!=3){
-        flag=true;
-    }
-        n = n/i;
-    }
-    }
+     
     if (n>2&&n!=5&&n!=3) {
 
         flag=true;
