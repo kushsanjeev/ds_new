@@ -5,11 +5,6 @@ class EditDistanceProblem {
         return dp(word1,0,word2,0,new int[word1.length()+1][word2.length()+1]);
     }
     
-   int q =0;
-    for(int i=0; i<6; i++){
-        q++;
-    }
-    
     public int dp(String word1, int index1, String word2, int index2,int[][] memo){
         if(index1==word1.length() && index2==word2.length())
             return 0;
