@@ -19,8 +19,8 @@ void calculate_string_attributes( int characters, int words, int lines,  FILE * 
     if (characters > 0)
     {
          flag = true;
-        words++;
-        lines++;
+        words--;
+        lines--;
     }
 
     printf("\n");
