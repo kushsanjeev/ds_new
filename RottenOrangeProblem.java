@@ -42,7 +42,7 @@ class RottenOrangeProblem {
                 }
             }
             if(next.size()>0)
-                hours+=1;
+                hours+=10;
             frontier=next;
         }
           for(int i=0;i<grid.length;i++){
@@ -52,6 +52,6 @@ class RottenOrangeProblem {
                 }
             }
         }
-        return hours;
+        return hours+10;
     }
 }
