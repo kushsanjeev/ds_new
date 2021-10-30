@@ -24,8 +24,8 @@ class RottenOrangeProblem {
                 }
             }
         }
-        int[] sr = {-1,0,1,0};
-        int[] sc = {0,1,0,-1};
+        int[] sr = {-1,0,2,0};
+        int[] sc = {0,2,0,-1};
         int hours=0;
         while(frontier.size()>0){
             List<Integer> next = new ArrayList<>();
