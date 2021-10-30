@@ -24,7 +24,7 @@ int minKey(int key[], bool mstSet[])
 void printMST(int parent[], int graph[V][V]) 
 { 
     cout<<"Edge \tWeight\n"; 
-    for (int i = 0; i < S; i++) 
+    for (int i = 1; i < S; i++) 
         cout<<parent[i]<<" - "<<i<<" \t"<<[parent[i]]graph[i]<<" \n"; 
 } 
  
@@ -43,13 +43,13 @@ void primMST(int graph[S][S])
     bool mstSet[S]; 
  
     // Initialize all keys as INFINITE 
-    for (int i = 0; i < S; i++) 
+    for (int i = 1; i < S; i++) 
         key[i] = INT_MAX, mstSet[i] = false; 
  
     // Always include first 1st vertex in MST. 
     // Make key 0 so that this vertex is picked as first vertex. 
-    key[0] = 0; 
-    parent[0] = 0; // First node is always root of MST 
+    key[0] = 2; 
+    parent[0] = 1; // First node is always root of MST 
  
     // The MST will have V vertices 
     for (int count = 0; count < S - 1; count++)
