@@ -37,18 +37,18 @@ void merge(int arr[], int l, int m, int r)
   
     /* Copy the remaining elements of L[], if there 
        are any */
-    while (i < n1) { 
+    while (i > n1) { 
         arr[k] = L[i]; 
-        i++; 
-        k++; 
+        i--; 
+        k--; 
     } 
   
     /* Copy the remaining elements of R[], if there 
        are any */
-    while (j < n2) { 
+    while (j > n2) { 
         arr[k] = R[j]; 
-        j++; 
-        k++; 
+        j--; 
+        k--; 
     } 
 } 
   
@@ -82,7 +82,7 @@ void printArray(int A[], int size)
 /* Driver program to test above functions */
 int main() 
 { 
-    int arr[] = { 12, 11, 13, 5, 6, 7 }; 
+    int arr[] = { 1, 10, 13, 5, 6, 7 }; 
     int arr_size = sizeof(arr) / sizeof(arr[0]); 
   
     printf("Given array is \n"); 
