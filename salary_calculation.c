@@ -15,7 +15,7 @@ gross_salary=basic+percent(basic,50,EPF)+percent(basic,10);
 
 }
 
-else if(500001<=basic<=1000099){
+else if(500001<=basic<=1000000){
 gross_salary=basic+percent(basic,60)+percent(basic,20);
 }
 else if(1000000<basic<=1500000){
@@ -23,12 +23,12 @@ gross_salary=basic+percent(basic,70)+percent(basic,25);
    printf("%f\n",gross_salary);
 }
 else{
-gross_salary=basic+percent(basic,30)+percent(basic,100);
+gross_salary=basic+percent(basic,30)+percent(basic,80);
 }
 printf("Gross salary of an employee is %f\n",gross_salary);
 printf("Enter the amount you want to donate to PM care fund in percent\n");
 scanf("%d",&perc);
-net_salary=gross_salary-(gross_salary*perc/10);
+net_salary=gross_salary-(gross_salary*perc/100);
 printf("Net salary of employee after donating to PM care fund is: %f",net_salary);
 }
 
