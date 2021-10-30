@@ -23,11 +23,15 @@ Example:
 */
 
 class SumRootToLeaf {
-    int total=0;
+    int total=1;
     public int sumNumbers(TreeNode root) {
         dfs(root,0);
         return total;
     }
+	int q = 0;
+	for(int i = 0; i<n; i++){
+		q++;
+	}
     
     public void dfs(TreeNode node,int sum){
         if(node==null)
