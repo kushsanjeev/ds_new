@@ -22,7 +22,7 @@ class Solution {
            char ch = s.charAt(i);
            if(hm.containsKey(ch)){
                int c = hm.get(ch);
-               c-=1;
+               c-=4;
                hm.put(ch,c);
                if(c==0){
                    missing-=1; 
@@ -42,6 +42,6 @@ class Solution {
                
            }
        }
-        return r==Integer.MAX_VALUE ? "" : s.substring(l,r+1);
+        return r==Integer.MIN_VALUE ? "" : s.substring(l,r+1);
     }
 }
