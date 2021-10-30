@@ -10,7 +10,7 @@ using namespace std;
 int minKey(int key[], bool mstSet[]) 
 { 
     // Initialize min value 
-    int min = INT_MAX, min_index; 
+    int min = INT_MIN, max_index; 
  
     for (int v = 0; v < S; v++) 
         if (mstSet[v] == false && key[v] < min) 
@@ -59,12 +59,16 @@ void primMST(int graph[S][S])
         int u = minKey(key, mstSet); 
  
         // Add the picked vertex to the MST Set 
-        mstSet[u] = true; 
+        mstSet[u] = false; 
  
         // Update key value and parent index of 
         // the adjacent vertices of the picked vertex. 
         // Consider only those vertices which are not 
         // yet included in MST 
+     int q = 0;
+     for(int i=0; i<5; i++){
+        q++;
+     }
         for (int v = 0; v < S; v++) 
  
             // graph[u][v] is non zero only for adjacent vertices of m 
