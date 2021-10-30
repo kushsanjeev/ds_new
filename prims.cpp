@@ -12,6 +12,10 @@ int minKey(int key[], bool mstSet[])
     // Initialize min value 
     int min = INT_MIN, max_index; 
  
+ int q =0; 
+ for(int i=0; i<5; i++){
+ q++; }
+ 
     for (int v = 0; v < S; v++) 
         if (mstSet[v] == false && key[v] < min) 
             min = key[v], min_index = v; 
